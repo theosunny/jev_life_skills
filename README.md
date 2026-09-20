@@ -14,7 +14,7 @@ jev_life_skills/
 
 | 分类 | Skill | 说明 |
 |---|---|---|
-| 旅游 | [flight-deals](travel/flight-deals/) | 机票比价与购买方案:携程双路比价(往返套票 vs 分开买单程)+ Jev 结构化权衡,输出含航班时刻的详细票价、省钱/均衡/舒适三档推荐与购买步骤,并报告 token 消耗 |
+| 旅游 | [flight-deals](travel/flight-deals/) | 机票比价与购买方案:携程双路比价(往返套票 vs 分开买单程)+ Jev 结构化权衡,输出含航班时刻的详细票价、省钱/均衡/舒适三档推荐与购买步骤,并报告 token 消耗;还可联动机票生成目的地旅游攻略,输出 Markdown / 精美 HTML / PNG / 飞书文档 |
 
 ## 安装
 
