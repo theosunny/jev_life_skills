@@ -54,6 +54,10 @@ cp -r jev_life_skills/travel/flight-deals ~/.claude/skills/
 
 skill 会给出:方案总览表(含价格口径:起价/推断实价/实测实价)→ 省钱/均衡/舒适三档推荐(航班号、起降时刻、机场、票价)→ 每档的购买步骤 → 下单必读提醒 → Jev token 消耗账单。
 
+### 输出格式
+
+默认输出纯 Markdown 报告(对话内展示 + 保存为 `flight-report-YYYYMMDD.md`),不依赖任何外部平台;如果你配置了飞书 CLI,也可以让它生成飞书在线文档。
+
 ### 注意
 
 - 携程列表价是「起价」,订单实付通常上浮 20-30%,skill 会自动标注口径,下单前以订单页为准
