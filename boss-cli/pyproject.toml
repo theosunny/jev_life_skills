@@ -1,0 +1,62 @@
+[project]
+name = "jev-boss-cli"
+version = "0.3.7"
+description = "Jev fork of BOSS直聘 CLI — 终端搜职位/聊 HR（已修复登录态校验，浏览器 Cookie 登录开箱即用）"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+authors = [
+    { name = "jackwener", email = "jakevingoo@gmail.com" },
+    { name = "theosunny" },
+]
+keywords = ["boss", "zhipin", "cli", "terminal", "job", "recruitment"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business",
+]
+dependencies = [
+    "click>=8.0",
+    "rich>=13.0",
+    "httpx>=0.27",
+    "browser-cookie3>=0.19",
+    "qrcode>=7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.11.0",
+]
+yaml = [
+    "pyyaml>=6.0",
+]
+browser = [
+    "camoufox>=0.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/theosunny/jev_life_skills/tree/main/boss-cli"
+Repository = "https://github.com/theosunny/jev_life_skills"
+Issues = "https://github.com/theosunny/jev_life_skills/issues"
+
+[project.scripts]
+jevboss = "jev_boss_cli.cli:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["jev_boss_cli"]
+
+[tool.pytest.ini_options]
+markers = [
+    "smoke: end-to-end tests requiring live cookies (deselect with '-m \"not smoke\"')",
+]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 140
